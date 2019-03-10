@@ -1,5 +1,7 @@
 package no.hials.page.replacement;
 
+import java.util.List;
+
 /**
  * Common interface for Page Replacement algorithm
  * @author Girts Strazdins 
@@ -115,6 +117,21 @@ public abstract class ReplacementAlgorithm {
         } else {
             return String.valueOf(EMPTY);
         }
+    }
+
+    protected boolean checkFrameFull() {
+        boolean result = false;
+        int numTaken = 0;
+        for(int i = 0; i < 3; i++) {
+            if(frames[i] != -1) {
+                numTaken++;
+            }
+        }
+        if(numTaken >= 3) {
+            result = true;
+        }
+        System.out.println("taken: " + numTaken);
+        return result;
     }
     
 }
