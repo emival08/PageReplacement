@@ -1,0 +1,8 @@
+out\*
+\.idea/
+
+out/
+
+page-replacement-source/
+
+page-replacement\.iml
