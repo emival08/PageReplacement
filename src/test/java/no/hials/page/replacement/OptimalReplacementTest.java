@@ -25,8 +25,19 @@ public class  OptimalReplacementTest {
         assertEquals("7, 0, 1", frameStatus);
 
         // TODO - add additional Unit tests here
+        algo.setup(3);
+        ref = "9,8,8,8,8,8,8,6,6,6,4,4,4,4,2,2,2,2,2,0,0,0,0,0,0";
+        replacements = algo.process(ref);
+        frameStatus = algo.getFrameStatus();
+        assertEquals(0, replacements);
+        assertEquals("9, 8, 6", frameStatus);
 
-
+        algo.setup(3);
+        ref = "0,0,0,0,2,2,2,2,5,5,5,5,1,23,3,34,5,5,12,6";
+        replacements = algo.process(ref);
+        frameStatus = algo.getFrameStatus();
+        assertEquals(0, replacements);
+        assertEquals("0, 2, 5", frameStatus);
     }
    
 }

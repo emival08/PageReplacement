@@ -5,4 +5,8 @@ out/
 
 page-replacement-source/
 
-page-replacement\.iml
+page-replacement/
+
+target/
+
+*.iml
